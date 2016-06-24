@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+JMETER_HOME="/home/yasassri/soft/Jmeter/apache-jmeter-3.0"
+
 scriptlocation="resources/testscripts"
 reporttarget="target/reports"
 cleantarget=true
-JMETER_HOME="/home/yasassri/soft/Jmeter/apache-jmeter-3.0"
 
 echo "Jmeter Home set to $JMETER_HOME"
 
@@ -18,7 +19,7 @@ else
     mkdir target/reports/html
 fi
 
-# Cleanig OLD Results
+# Cleaning OLD Results
 if [ "$cleantarget" = true ]; then
     echo "Cleaning the Target directory"
     rm -rf $reporttarget/jtl/*

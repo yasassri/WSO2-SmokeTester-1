@@ -5,4 +5,4 @@ A client to smoke test ESB
 
 - Clone the Client
 - Open test.sh file and change the necessary Parameter
-- Exucute the Script sh test.sh
+- Exucute the Script sh test.sh 
