@@ -2,8 +2,11 @@
 
 JMETER_HOME="/home/yasassri/soft/Jmeter/apache-jmeter-3.0"
 
+# Location of the test scripts
 scriptlocation="resources/testscripts"
+# Report saving location
 reporttarget="target/reports"
+# Clean the target when running
 cleantarget=true
 
 echo "Jmeter Home set to $JMETER_HOME"
@@ -11,7 +14,7 @@ echo "Jmeter Home set to $JMETER_HOME"
 #Creating the target directory if not exist
 if [ -d target ]
 then
-    echo "Directory already existing"
+    echo "Directory already exists!"
 else
     mkdir target
      mkdir target/reports
