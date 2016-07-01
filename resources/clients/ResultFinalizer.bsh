@@ -7,7 +7,7 @@ import org.apache.jmeter.threads.JMeterContext;
 import org.apache.jmeter.threads.AbstractThreadGroup;
 import org.apache.jmeter.threads.JMeterContextService;
 
-	String resultLogLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/logs/result.log";
+	String resultLogLocation = "target/logs/result.log";
      // Creating Jmeter Log File
 	try{
 	File file = new File(resultLogLocation);
@@ -27,6 +27,6 @@ import org.apache.jmeter.threads.JMeterContextService;
 	}
 
 
-	print(":::::: The Final Result Set :::::");
-	print(vars.get("results"));
-	print(":::::: The Final Result Set ::::: END :::::");
+	//print(":::::: The Final Result Set :::::");
+	//print(vars.get("results"));
+	//print(":::::: The Final Result Set ::::: END :::::");

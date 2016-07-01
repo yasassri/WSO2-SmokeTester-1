@@ -10,7 +10,7 @@ public class HTMLReportGenerator {
         // Can parse commadling arguments for the Product type and the version
 
         // Reading the Result File
-        String jmterLogLocation = "target/logs/result.log";
+        String jmterLogLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/logs/result.log";
         String htmlTemplateLocation = "";
         String htmlReportLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/reports/html/index.html";
         String finalTableString = "";
@@ -28,13 +28,19 @@ public class HTMLReportGenerator {
             e.printStackTrace();
         }
         // Creating the table String
-        finalTableString = "<table border=\"1\" style=\"width:100%\" class=\"table table-bordered table-condensed tablesorter \"> <tr>\n" +
-                "    <th>Thread Group Name</th>\n" +
-                "    <th>Sampler Name</th>\n" +
+        finalTableString = "<table border=\"1\" style=\"table-layout: fixed; width:100%\" class=\"table table-bordered table-condensed tablesorter \"> " +
+                "<col width=\"300px\">\n" +
+                "<col width=\"300px\">\n" +
+                "<col width=\"300px\">\n" +
+                "<col width=\"300px\">\n" +
+                "<col width=\"1000px\">\n" +
+                "<col width=\"500px\"><tr>\n" +
+                "<th>Thread Group Name</th>\n" +
+                "<th>Sampler Name</th>\n" +
                 "<th>Sampler Status</th>\n" +
                 "<th>Response Code</th>\n" +
                 "<th>Response Message</th>\n" +
-                "<th>Request Details - Only Shown For Errors</th>\n" +
+                "<th>Request Details</th>\n" +
                 "  </tr>\n";
         for (int i = 0; i < resultString1.length; i++) {
 
@@ -43,32 +49,27 @@ public class HTMLReportGenerator {
                 continue;
             }
             samplerString = resultString1[i].split(",");
-            finalTableString=finalTableString+"<tr>";
-            for(int j =0; j < samplerString.length; j++){
-                if (j==2 ){
-                    if (samplerString[j].equals("Successful")){
-                        finalTableString=finalTableString+"<td bgcolor=\"#00FF00\">" +samplerString[j]+"</td>";
-                        successCount++;
-                        continue;
-                    }else {
-                        finalTableString=finalTableString+"<td bgcolor=\"#FF0000\">" +samplerString[j]+"</td>";
-                        FailureCount++;
-                        continue;
+
+            if (samplerString[2].equals("Successful")){
+                successCount++;
+                // We are not including successes in the report
+            } else {
+                FailureCount++;
+                finalTableString=finalTableString+"<tr>";
+                for(int j =0; j < samplerString.length; j++){
+                    if (j==2 ){
+                            finalTableString=finalTableString+"<td bgcolor=\"#FF0000\">" +samplerString[j]+"</td>";
+                            continue;
                     }
-                }
-                if (j==5){
-                    if (samplerString[2].equals("Successful")){
-                        finalTableString=finalTableString+"<td>See the Result Log File for Request information of Succesfull Requests</td>";
-                        continue;
-                    } else {
-                        finalTableString=finalTableString+"<td>" +samplerString[j]+"</td>";
-                        continue;
+                    if (j==5){
+                            finalTableString=finalTableString+"<td>" +samplerString[j]+"</td>";
+                            continue;
                     }
+                    finalTableString=finalTableString+"<td>" +samplerString[j]+"</td>";
+                    //print(samplerRersults[j]);
                 }
-                finalTableString=finalTableString+"<td>" +samplerString[j]+"</td>";
-                //print(samplerRersults[j]);
+                finalTableString=finalTableString+"</tr>";
             }
-            finalTableString=finalTableString+"</tr>";
         }
         finalTableString=finalTableString+"</table>";
 
@@ -82,12 +83,12 @@ public class HTMLReportGenerator {
                 "  <tr>\n" +
                 "    <td>No of Successful Requests</td>\n" +
                 "    <td>"+successCount+"</td>\n" +
-                "    <td>"+(successCount/(successCount+FailureCount))*100+"%</td>\n" +
+                "    <td>"+(Math.round((double)successCount / (successCount+FailureCount)*100))+"%</td>\n" +
                 "  </tr>\n" +
                 "  <tr>\n" +
                 "    <td>No of Failures</td>\n" +
                 "    <td>"+FailureCount+"</td>\n" +
-                "<td>"+(FailureCount/(successCount+FailureCount))*100+"%</td>\n" +
+                "<td>"+(Math.round((double)FailureCount / (successCount+FailureCount)*100))+"%</td>\n" +
                 "  </tr>\n" +
                 "<tr>\n" +
                 "    <th>Total Requests </th>\n" +
@@ -107,13 +108,13 @@ public class HTMLReportGenerator {
             // Updating the Summary Graph
             String dashboardjs = new String(Files.readAllBytes(Paths.get(dashboardJSLocation)));
             //var data = {"OkPercent": 50.0, "KoPercent": 50.0};
-            dashboardjs = dashboardjs.replace("${requestsummary}","\"OkPercent\": "+(successCount/(successCount+FailureCount))*100+", \"KoPercent\": "+(FailureCount/(successCount+FailureCount))*100);
+            Double successPercentage = (double)successCount / (successCount+FailureCount);
+            dashboardjs = dashboardjs.replace("${requestsummary}","\"OkPercent\": "+((double)successCount / (successCount+FailureCount)*100)+", \"KoPercent\": "+((double)FailureCount / (successCount+FailureCount)*100));
             Files.write(Paths.get(dashboardJSLocation), dashboardjs.getBytes());
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Success : " +successCount + " Fails : "+FailureCount);
-
+        System.out.println("Test Run Result Summary\n\nSuccessful Sampler Clount  : " +successCount + " \nSampler Failures : "+FailureCount);
     }
 }

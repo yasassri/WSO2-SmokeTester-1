@@ -16,7 +16,7 @@ if (prev_result !=  null) {
 	// Appending the Thread Group name and the Sampler Label
 	resultString = JMeterContextService.getContext().getThreadGroup().getName()+ "," + prev_result.getSampleLabel()+",";
 
-	if(prev_result.isResponseCodeOK()){
+	if(prev_result.isSuccessful()){
 		resultString = resultString+"Successful,"+prev_result.getResponseCode()+","+"Response Not Shown!!,";
 		} else {
 			resultString = resultString+"Error,"+prev_result.getResponseCode()+","+prev_result.getResponseDataAsString()+",";
@@ -31,7 +31,7 @@ if (prev_result !=  null) {
      AssertionResult [] AssertResults=prev_result.getAssertionResults();
 
 
-	print(resultString);
+	//print(resultString);
      String results = vars.get("results");
 
 	// Appending Results to the global Jmeter Variable
