@@ -1,0 +1,32 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.apache.jmeter.threads.JMeterContext;
+import org.apache.jmeter.threads.AbstractThreadGroup;
+import org.apache.jmeter.threads.JMeterContextService;
+
+	String resultLogLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/logs/result.log";
+     // Creating Jmeter Log File
+	try{
+	File file = new File(resultLogLocation);
+
+		// if file doesnt exists, then create it
+		if (!file.exists()) {
+				print("Creating a new log file");
+				file.createNewFile();
+			}
+		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write(vars.get("results"));
+		bw.close();
+
+	} catch(Exception e){
+	print("Error while writing the result file : "+e.getMessage());
+	}
+
+
+	print(":::::: The Final Result Set :::::");
+	print(vars.get("results"));
+	print(":::::: The Final Result Set ::::: END :::::");

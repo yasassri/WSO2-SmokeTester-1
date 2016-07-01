@@ -1,0 +1,45 @@
+import org.apache.jmeter.util.JMeterUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import org.apache.jmeter.assertions.AssertionResult;
+import org.apache.jmeter.threads.AbstractThreadGroup;
+import org.apache.jmeter.threads.JMeterContextService;
+
+SampleResult prev_result=ctx.getPreviousResult();
+// All Test Results information appended to this. Format is below
+//<Thread_groupName>,<SamplerLabel>,<SamplerStatus>,<ResponseCode/Error><Response Message>,<RequestInformation>,<getResponseCode()><AssertionInformato>
+
+String resultString;
+
+//print("running :::::::::::::: " +prev_result.getResponseCode());
+if (prev_result !=  null) {
+
+	// Appending the Thread Group name and the Sampler Label
+	resultString = JMeterContextService.getContext().getThreadGroup().getName()+ "," + prev_result.getSampleLabel()+",";
+
+	if(prev_result.isResponseCodeOK()){
+		resultString = resultString+"Successful,"+prev_result.getResponseCode()+","+"Response Not Shown!!,";
+		} else {
+			resultString = resultString+"Error,"+prev_result.getResponseCode()+","+prev_result.getResponseDataAsString()+",";
+			}
+	//Appending Response Message
+	//resultString = resultString+prev_result.getResponseMessage()+",";
+
+	//Get Sampler Data
+	resultString = resultString+prev_result.getSamplerData()+"####";
+
+	//Assertion Results
+     AssertionResult [] AssertResults=prev_result.getAssertionResults();
+
+
+	print(resultString);
+     String results = vars.get("results");
+
+	// Appending Results to the global Jmeter Variable
+     if(!results.startsWith("null")){
+     vars.put("results",results+resultString);
+     }else {
+     	vars.put("results",resultString);
+     	//print("IN THE ELSEEEEEEEEEEEEEEEE");
+     	}
+}
+else print("prev_result is null");

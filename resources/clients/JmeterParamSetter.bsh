@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+String configPath = "resources/configs/server.properties";
+String filePath = new File("").getAbsolutePath();
+
+	try{
+		File file = new File(configPath);
+		FileInputStream fileInput = new FileInputStream(file);
+		Properties properties = new Properties();
+		properties.load(fileInput);
+		fileInput.close();
+
+		// Iterating over properties and setting as Jmeter Params
+		for(String key : properties.stringPropertyNames()) {
+ 			String value = properties.getProperty(key);
+ 			vars.put(key,value);
+  			 System.out.println("Property Set : " +key + " => " + value);
+  			 //print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		}
+
+	}catch(Exception e) {
+		System.out.println("Exception Occured While Setting Properties : " +e.getMessage());
+		}
