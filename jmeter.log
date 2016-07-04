@@ -1,0 +1,137 @@
+2016/07/04 14:39:06 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_US 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Loading user properties from: /home/yasassri/soft/Jmeter/apache-jmeter-3.0/bin/user.properties 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Loading system properties from: /home/yasassri/soft/Jmeter/apache-jmeter-3.0/bin/system.properties 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Copyright (c) 1998-2016 The Apache Software Foundation 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Version 3.0 r1743807 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: java.version=1.8.0_05 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: os.name=Linux 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: os.arch=amd64 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: os.version=4.5.7-200.fc23.x86_64 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: file.encoding=UTF-8 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Max memory     =3711959040 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Available Processors =8 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: Default Locale=English (United States) 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: JMeter  Locale=English (United States) 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: JMeterHome=/home/yasassri/soft/Jmeter/apache-jmeter-3.0 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: user.dir  =/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester 
+2016/07/04 14:39:06 INFO  - jmeter.JMeter: PWD       =/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester 
+2016/07/04 14:39:07 INFO  - jmeter.JMeter: IP: 198.105.244.11 Name: yasassri-device FullName: 198.105.244.11 
+2016/07/04 14:39:07 INFO  - jmeter.services.FileServer: Default base='/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester' 
+2016/07/04 14:39:07 INFO  - jmeter.services.FileServer: Set new base='/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/resources/testscripts/ESB/4.9.0' 
+2016/07/04 14:39:07 INFO  - jmeter.save.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2 
+2016/07/04 14:39:07 INFO  - jmeter.save.SaveService: Using SaveService properties file encoding UTF-8 
+2016/07/04 14:39:07 INFO  - jmeter.save.SaveService: Using SaveService properties version 2.9 
+2016/07/04 14:39:07 INFO  - jmeter.save.SaveService: All converter versions present and correct 
+2016/07/04 14:39:07 INFO  - jmeter.save.SaveService: Loading file: resources/testscripts/ESB/4.9.0/ESB_Smoke.jmx 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.control.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_ 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2016/07/04 14:39:07 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser 
+2016/07/04 14:39:07 INFO  - jmeter.JMeter: Creating summariser <summary> 
+2016/07/04 14:39:07 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2016/07/04 14:39:07 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2016/07/04 14:39:07 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2016/07/04 14:39:07 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2016/07/04 14:39:07 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2016/07/04 14:39:08 INFO  - jmeter.JMeter: Running test (1467623348157) 
+2016/07/04 14:39:08 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : ESB Test Suite - APIs | HTTP Inbound 
+2016/07/04 14:39:08 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group ESB Test Suite - APIs | HTTP Inbound. 
+2016/07/04 14:39:08 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2016/07/04 14:39:08 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2016/07/04 14:39:08 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2016/07/04 14:39:08 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2016/07/04 14:39:08 INFO  - jmeter.threads.JMeterThread: Thread started: ESB Test Suite - APIs | HTTP Inbound 1-1 
+2016/07/04 14:39:08 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are START times 
+2016/07/04 14:39:08 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to ISO-8859-1 
+2016/07/04 14:39:08 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2016/07/04 14:39:08 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2016/07/04 14:39:08 INFO  - jmeter.protocol.http.sampler.HTTPHCAbstractImpl: Local host = yasassri-device 
+2016/07/04 14:39:08 INFO  - jmeter.protocol.http.sampler.HTTPHC4Impl: HTTP request retry count = 0 
+2016/07/04 14:39:08 INFO  - jmeter.protocol.http.sampler.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory 
+2016/07/04 14:39:08 INFO  - jmeter.util.JsseSSLManager: Using default SSL protocol: TLS 
+2016/07/04 14:39:08 INFO  - jmeter.util.JsseSSLManager: SSL session context: per-thread 
+2016/07/04 14:39:08 INFO  - jmeter.util.SSLManager: JmeterKeyStore Location:  type JKS 
+2016/07/04 14:39:08 INFO  - jmeter.util.SSLManager: KeyStore created OK 
+2016/07/04 14:39:08 WARN  - jmeter.util.SSLManager: Keystore file not found, loading empty keystore 
+2016/07/04 14:39:08 INFO  - jmeter.protocol.http.parser.BaseParser: Created org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/04 14:39:08 INFO  - jmeter.protocol.http.sampler.ResourcesDownloader: Creating ResourcesDownloader with keepalive_inseconds:60 
+2016/07/04 14:39:08 INFO  - jmeter.protocol.http.parser.BaseParser: Created org.apache.jmeter.protocol.http.parser.CssParser 
+2016/07/04 14:39:12 ERROR - jmeter.control.IfController: API Invocation: error while processing [${apiexist}]
+ org.mozilla.javascript.EvaluatorException: missing ; before statement (<cmd>#1)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:77)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:64)
+	at org.mozilla.javascript.Parser.addError(Parser.java:188)
+	at org.mozilla.javascript.Parser.addError(Parser.java:166)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:256)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:243)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:236)
+	at org.mozilla.javascript.Parser.autoInsertSemicolon(Parser.java:1100)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1077)
+	at org.mozilla.javascript.Parser.statement(Parser.java:934)
+	at org.mozilla.javascript.Parser.parse(Parser.java:573)
+	at org.mozilla.javascript.Parser.parse(Parser.java:511)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2488)
+	at org.mozilla.javascript.Context.compileString(Context.java:1476)
+	at org.mozilla.javascript.Context.compileString(Context.java:1465)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1216)
+	at org.apache.jmeter.control.IfController$RhinoJsEngine.evaluate(IfController.java:105)
+	at org.apache.jmeter.control.IfController.evaluateCondition(IfController.java:187)
+	at org.apache.jmeter.control.IfController.next(IfController.java:240)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:225)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:123)
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:87)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:264)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016/07/04 14:39:12 ERROR - jmeter.control.IfController: Delete API: error while processing [${apiexist}]
+ org.mozilla.javascript.EvaluatorException: missing ; before statement (<cmd>#1)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:77)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:64)
+	at org.mozilla.javascript.Parser.addError(Parser.java:188)
+	at org.mozilla.javascript.Parser.addError(Parser.java:166)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:256)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:243)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:236)
+	at org.mozilla.javascript.Parser.autoInsertSemicolon(Parser.java:1100)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1077)
+	at org.mozilla.javascript.Parser.statement(Parser.java:934)
+	at org.mozilla.javascript.Parser.parse(Parser.java:573)
+	at org.mozilla.javascript.Parser.parse(Parser.java:511)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2488)
+	at org.mozilla.javascript.Context.compileString(Context.java:1476)
+	at org.mozilla.javascript.Context.compileString(Context.java:1465)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1216)
+	at org.apache.jmeter.control.IfController$RhinoJsEngine.evaluate(IfController.java:105)
+	at org.apache.jmeter.control.IfController.evaluateCondition(IfController.java:187)
+	at org.apache.jmeter.control.IfController.next(IfController.java:240)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:225)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:225)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222)
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:176)
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:123)
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:87)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:264)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016/07/04 14:39:20 INFO  - jmeter.util.BeanShellTestElement: Asserting HTTP Inbound EP Existance!! 
+2016/07/04 14:39:27 INFO  - jmeter.threads.JMeterThread: Thread is done: ESB Test Suite - APIs | HTTP Inbound 1-1 
+2016/07/04 14:39:27 INFO  - jmeter.threads.JMeterThread: Thread finished: ESB Test Suite - APIs | HTTP Inbound 1-1 
+2016/07/04 14:39:27 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2016/07/04 14:39:27 INFO  - jmeter.reporters.Summariser: summary =     39 in 00:00:19 =    2.1/s Avg:    33 Min:     2 Max:   690 Err:     4 (10.26%) 

@@ -7,8 +7,8 @@ if [ "$JMETER_HOME" == "" ];then
    exit
 fi
 
-# Location of the test scripts
-scriptlocation="resources/testscripts"
+# Location of the test scripts ATM this is Hardcoded for ESB 4.9.0. The script should be improved to accept commandline params to parse product name and version
+scriptlocation="resources/testscripts/ESB/4.9.0"
 # Report saving location
 reporttarget="target/reports"
 # Clean the target when running
@@ -33,7 +33,7 @@ fi
 #Copy the report templates to target directory
 cp -R resources/template/report/* target/reports/html/
 
-echo "Starting Tests!!"
+echo "\nStarting Tests!!\n"
 # Running the Jmeter Scripts
 for x in $scriptlocation/*.jmx; do
   echo "Running the Script $x"
