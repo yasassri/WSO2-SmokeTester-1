@@ -10,11 +10,11 @@ public class HTMLReportGenerator {
         // Can parse commadling arguments for the Product type and the version
 
         // Reading the Result File
-        String jmterLogLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/logs/result.log";
+        String jmterLogLocation = "target/logs/result.log";
         String htmlTemplateLocation = "";
-        String htmlReportLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/reports/html/index.html";
+        String htmlReportLocation = "target/reports/html/index.html";
         String finalTableString = "";
-        String dashboardJSLocation = "/home/yasassri/QA_STUFF/Patch_Automation/Tool/WSO2ESB-SmokeTester/target/reports/html/content/js/dashboard.js";
+        String dashboardJSLocation = "target/reports/html/content/js/dashboard.js";
 
         // Counter to count success counts
         int successCount = 0;
@@ -115,6 +115,6 @@ public class HTMLReportGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Test Run Result Summary\n\nSuccessful Sampler Clount  : " +successCount + " \nSampler Failures : "+FailureCount);
+        System.out.println("\n\nTest Run Result Summary\n\nSuccessful Sampler Clount  : " +successCount + " \nSampler Failures : "+FailureCount);
     }
 }

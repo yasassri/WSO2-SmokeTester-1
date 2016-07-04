@@ -17,7 +17,7 @@ import org.apache.jmeter.threads.JMeterContextService;
 				print("Creating a new log file");
 				file.createNewFile();
 			}
-		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
 		BufferedWriter bw = new BufferedWriter(fw);
 		bw.write(vars.get("results"));
 		bw.close();
@@ -25,7 +25,6 @@ import org.apache.jmeter.threads.JMeterContextService;
 	} catch(Exception e){
 	print("Error while writing the result file : "+e.getMessage());
 	}
-
 
 	//print(":::::: The Final Result Set :::::");
 	//print(vars.get("results"));
